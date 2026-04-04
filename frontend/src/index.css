@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fix Bootstrap collapse visibility conflicting with Tailwind's .collapse utility */
+.navbar .collapse {
+  visibility: visible;
+}

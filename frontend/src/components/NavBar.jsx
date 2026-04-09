@@ -68,11 +68,17 @@ const NavBar = () => {
 
   const isActive = (path) => {
     if (path === "/listings") {
-      return location.pathname.startsWith("/listings") || location.pathname.startsWith("/listing/");
+      return (
+        location.pathname.startsWith("/listings") ||
+        location.pathname.startsWith("/listing/")
+      );
     }
 
     if (path === "/listings/new") {
-      return location.pathname === "/listings/new" || location.pathname === "/newListing";
+      return (
+        location.pathname === "/listings/new" ||
+        location.pathname === "/newListing"
+      );
     }
 
     return location.pathname === path;
@@ -125,6 +131,13 @@ const NavBar = () => {
               </Link>
             ))}
           </div>
+           <div>
+            <Link to="/predict"  className="group relative overflow-hidden rounded-xl px-4 py-2.5 text-[15px] font-bold transition-all duration-300">
+            <p>
+              Predict Crop Prises
+            </p>
+            </Link>
+           </div>
 
           <div className="hidden items-center gap-4 lg:flex">
             <div className="mx-2 h-8 w-px bg-gray-200" />
@@ -197,7 +210,9 @@ const NavBar = () => {
 
       <div
         className={`fixed inset-0 z-40 bg-gray-900/40 backdrop-blur-sm transition-all duration-400 ease-in-out lg:hidden ${
-          mobileMenuOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
+          mobileMenuOpen
+            ? "pointer-events-auto opacity-100"
+            : "pointer-events-none opacity-0"
         }`}
         onClick={() => setMobileMenuOpen(false)}
         aria-hidden="true"
@@ -225,7 +240,9 @@ const NavBar = () => {
                     : "text-gray-700 hover:bg-gray-50 active:bg-gray-100"
                 }`}
               >
-                <div className={`${isActive(link.path) ? "scale-110 text-green-600" : "text-gray-400"} transition-transform duration-300`}>
+                <div
+                  className={`${isActive(link.path) ? "scale-110 text-green-600" : "text-gray-400"} transition-transform duration-300`}
+                >
                   {link.icon}
                 </div>
                 {link.name}
@@ -252,7 +269,9 @@ const NavBar = () => {
                     <p className="leading-tight font-extrabold text-gray-900">
                       {currentUser?.name || "My Account"}
                     </p>
-                    <p className="text-sm font-medium text-gray-500">{roleLabel}</p>
+                    <p className="text-sm font-medium text-gray-500">
+                      {roleLabel}
+                    </p>
                   </div>
                 </Link>
                 <button

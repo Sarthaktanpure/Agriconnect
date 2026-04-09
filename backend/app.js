@@ -6,6 +6,7 @@ const { apiRateLimiter } = require("./middlewares/rateLimit");
 const securityHeaders = require("./middlewares/securityHeaders");
 const authRoutes = require("./routes/authRoutes");
 const listingRoutes = require("./routes/listingRoutes");
+const aiRoutes = require("./routes/ai.js");
 const { errorHandler, notFoundHandler } = require("./middlewares/errorHandler");
 
 const app = express();
@@ -58,6 +59,7 @@ app.get("/health", (_req, res) => {
 
 app.use(authRoutes);
 app.use(listingRoutes);
+app.use('/api/ai', aiRoutes);
 app.use(notFoundHandler);
 app.use(errorHandler);
 

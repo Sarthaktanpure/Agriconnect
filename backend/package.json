@@ -12,6 +12,8 @@
   "license": "ISC",
   "description": "AgriConnect backend API",
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.86.1",
+    "@google/generative-ai": "^0.24.1",
     "bcrypt": "^6.0.0",
     "cloudinary": "^1.41.3",
     "cors": "^2.8.6",

@@ -11,10 +11,14 @@ import NewListing from "./pages/NewListing";
 import Profile from "./pages/Profile";
 import ShowListing from "./pages/ShowListing";
 import Signup from "./pages/Signup";
+// import AntiGravityHub from "./pages/AntiGravityHub";
+import ChatBot from "./components/ChatBot";
+import PricePredict from "./pages/PricePredict";
 
 function App() {
   return (
     <div className="min-h-screen">
+      <ChatBot/>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -31,6 +35,8 @@ function App() {
           <Route path="/listings" element={<AllListings />} />
           <Route path="/listings/:id" element={<ShowListing />} />
           <Route path="/listing/:id" element={<ShowListing />} />
+          <Route path="/predict" element={<PricePredict />} />
+
           <Route
             path="/listings/:id/contact"
             element={
@@ -71,6 +77,7 @@ function App() {
               </ProtectedRoute>
             }
           />
+          {/* <Route path="/ai-hub" element={<AntiGravityHub />} /> */}
         </Routes>
       </BrowserRouter>
     </div>

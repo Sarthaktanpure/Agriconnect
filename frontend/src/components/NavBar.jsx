@@ -53,6 +53,11 @@ const NavBar = () => {
         path: "/listings",
         icon: <LayoutGrid className="w-5 h-5" />,
       },
+      {
+      name: "Predict Crop Prices",
+      path: "/predict",
+      icon: <Leaf className="w-5 h-5" />,
+    },
     ];
 
     if (isFarmer(currentUser)) {
@@ -131,14 +136,6 @@ const NavBar = () => {
               </Link>
             ))}
           </div>
-           <div>
-            <Link to="/predict"  className="group relative overflow-hidden rounded-xl px-4 py-2.5 text-[15px] font-bold transition-all duration-300">
-            <p>
-              Predict Crop Prises
-            </p>
-            </Link>
-           </div>
-
           <div className="hidden items-center gap-4 lg:flex">
             <div className="mx-2 h-8 w-px bg-gray-200" />
             {isLoggedIn ? (

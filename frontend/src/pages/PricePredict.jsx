@@ -41,7 +41,7 @@ export default function PricePrediction() {
       <NavBar />
 
       {/* ✅ MAIN PAGE WRAPPER (FIXED) */}
-      <div className="min-h-screen flex flex-col bg-gradient-to-br from-[#f0f6ee] via-[#6cf762] to-green pt-20">
+      <div className="min-h-screen flex flex-col bg-gradient-to-br from-[#f2f3f2] via-[#cfddce] to-green pt-20">
         {/* ✅ CENTER CONTENT PROPERLY */}
         <div className="flex-grow flex items-center justify-center px-4 py-10">
           {/* CARD */}

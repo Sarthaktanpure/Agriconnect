@@ -110,7 +110,7 @@ const NavBar = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           <Link to="/" className="group relative z-50 flex items-center gap-3">
-            <div className="transform rounded-2xl bg-gradient-to-br from-green-500 to-green-700 p-2.5 shadow-sm transition-all duration-300 group-hover:-translate-y-0.5 group-hover:shadow-lg group-hover:shadow-green-500/30">
+            <div className="transform rounded-2xl bg-gradient-to-br from-green-100 to-green-700 p-2.5 shadow-sm transition-all duration-300 group-hover:-translate-y-0.5 group-hover:shadow-lg group-hover:shadow-green-500/30">
               <Leaf className="h-6 w-6 text-white" />
             </div>
             <span className="text-2xl font-black tracking-tight text-gray-900 transition-colors duration-300 group-hover:text-green-800">
